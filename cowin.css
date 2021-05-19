@@ -1,0 +1,28 @@
+.heading-container {
+  display: flex;
+  font-size: medium;
+  justify-content: flex-start;
+}
+#detail {
+  display: flex;
+  justify-content: flex-start;
+  color: blue;
+  background-color: azure;
+}
+.Select-box {
+  display: flex;
+  margin: 10px;
+  padding: 17px;
+}
+.label {
+  padding: 8px 13px;
+}
+.select-option {
+  width: 140px;
+}
+span {
+  color: black;
+}
+th {
+  padding: 30px 30px;
+}

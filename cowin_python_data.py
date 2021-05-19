@@ -5,11 +5,11 @@ import time
 
 import json
 
-age = 52
-pinCodes = ["585403"]
-num_days = 2
+age = int(input("Please!, Enter Your Age = "))
+pinCodes = list(map(str,input("please enter valid pincode and it must be 6 digt only = ").split()))
+num_days = int(input("Please!, Enter days_Gap you need = "))
 
-print_flag = 'Y'
+print_flag = 'y'
 
 print("Starting search for Covid vaccine slots!")
 
@@ -25,18 +25,19 @@ while True:
             URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={}&date={}".format(pinCode, given_date)
             header = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'} 
             
-            result = requests.get( URL, headers=header )
+            result = requests.get( URL , headers=header )
             # print('-------------------------------------------------------------')
             # print(result.text)
             # print('-------------------------------------------------------------')
             # print(result.status_code)
             if result.ok:
                 response_from_json = result.json()
-                print("==================================",response_from_json["centers"][0]["district_name"],"=========================================")
+                if(len(response_from_json["centers"])>0):
+                    print("==================================",response_from_json["centers"][0]["district_name"],"=========================================")
 
-                flag = False
+                # flag = False
                 if response_from_json["centers"]:            
-                    if(print_flag.lower() =='y'):
+                    if(print_flag=='y'):
 
                         for center in response_from_json["centers"]:
                             # print('-------------------------------------------------------------')

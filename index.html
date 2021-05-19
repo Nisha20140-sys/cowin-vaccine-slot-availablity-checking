@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cowin.css" />
+    <title>CoWIN-Vaccination Slot Checking</title>
+  </head>
+  <body>
+    <div class="heading-container">
+      <h1>CoWIN Vaccination Slot Availablility</h1>
+    </div>
+    <div id="detail">
+      <h3>
+        The CoWIN APIs are geo-fenced so sometimes you may not see an output!
+        Please try after sometime
+      </h3>
+    </div>
+    <div class="Select-box">
+      <label class="label">Select Date Range</label>
+      <input
+        type="number"
+        value="Age"
+        placeholder="1-100 Days"
+        min="1"
+        max="100"
+        class="select-option"
+        size="100px"
+        required
+      />
+    </div>
+    <div class="Select-box">
+      <label class="label">Select pincode</label>
+      <input
+        type="number"
+        value="pincode"
+        placeholder="PIN"
+        min="100000"
+        required
+      />
+      <label class="label">Select minimum Age</label>
+      <input type="number" value="Age" placeholder="Age" min="1" required />
+      <label class="label">Select Free/Paid </label>
+      <select class="select-option" required>
+        <option value="Free">Free</option>
+        <option value="Paid">Paid</option>
+      </select>
+      <label class="label">Select Availablility</label>
+      <select class="select-option" required>
+        <option value="Available">Availablility</option>
+      </select>
+    </div>
+    <div>
+      <table id="table">
+        <tr>
+          <th>Date</th>
+          <th>Available Capacity</th>
+          <th>Vaccine</th>
+          <th>Min Age</th>
+          <th>pincode</th>
+          <th>Hospital Name</th>
+          <th>State</th>
+          <th>District</th>
+          <th>Block Name</th>
+          <th>Fees</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
