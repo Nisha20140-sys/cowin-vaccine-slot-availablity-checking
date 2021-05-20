@@ -1,3 +1,6 @@
+h1 {
+  color: rgba(168, 14, 240, 0.842);
+}
 .heading-container {
   display: flex;
   font-size: medium;
@@ -25,7 +28,25 @@ span {
 }
 th {
   padding: 30px 30px;
+  background-color: burlywood;
+}
+#second-header {
+  background-color: lightskyblue;
 }
 .btn {
   cursor: pointer;
+  background-color: #b24cfd;
+  border-radius: 25px;
+}
+#table {
+  border: blue;
+  background-color: aqua;
+}
+td {
+  padding: 30px;
+  align-items: center;
+  border: 1px solid black;
+}
+td:hover {
+  background-color: aqua;
 }
