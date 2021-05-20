@@ -26,3 +26,6 @@ span {
 th {
   padding: 30px 30px;
 }
+.btn {
+  cursor: pointer;
+}

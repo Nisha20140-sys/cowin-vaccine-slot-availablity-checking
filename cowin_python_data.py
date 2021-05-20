@@ -14,7 +14,9 @@ print_flag = 'y'
 print("Starting search for Covid vaccine slots!")
 
 today_date = datetime.today()
+print(today_date)
 list_of_days_result = [today_date + timedelta(days=i) for i in range(num_days)]
+print(list_of_days_result)
 good_format_date_results = [i.strftime("%d-%m-%Y") for i in list_of_days_result]
 
 while True:

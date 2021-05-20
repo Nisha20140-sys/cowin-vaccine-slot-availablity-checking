@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="cowin.css" />
+    <script src="./cowin.js" defer></script>
     <title>CoWIN-Vaccination Slot Checking</title>
   </head>
   <body>
@@ -16,6 +17,15 @@
         The CoWIN APIs are geo-fenced so sometimes you may not see an output!
         Please try after sometime
       </h3>
+      <span>
+        <button
+          class="btn"
+          style="margin: 13px; font-size: 28px"
+          onclick="availablity()"
+        >
+          Check-Available
+        </button>
+      </span>
     </div>
     <div class="Select-box">
       <label class="label">Select Date Range</label>
@@ -23,6 +33,7 @@
         type="number"
         value="Age"
         placeholder="1-100 Days"
+        id="data-date"
         min="1"
         max="100"
         class="select-option"
@@ -35,19 +46,27 @@
       <input
         type="number"
         value="pincode"
+        id="data-pin"
         placeholder="PIN"
         min="100000"
         required
       />
       <label class="label">Select minimum Age</label>
-      <input type="number" value="Age" placeholder="Age" min="1" required />
+      <input
+        type="number"
+        value="Age"
+        id="data-age"
+        placeholder="Age"
+        min="1"
+        required
+      />
       <label class="label">Select Free/Paid </label>
-      <select class="select-option" required>
+      <select class="select-option" id="data-free" required>
         <option value="Free">Free</option>
         <option value="Paid">Paid</option>
       </select>
       <label class="label">Select Availablility</label>
-      <select class="select-option" required>
+      <select class="select-option" id="data-available" required>
         <option value="Available">Availablility</option>
       </select>
     </div>
