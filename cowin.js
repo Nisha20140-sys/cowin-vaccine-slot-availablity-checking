@@ -9,7 +9,7 @@ function availablity() {
   const age = document.getElementById('data-age').value;
   const cost = document.getElementById('data-free').value;
   const available = document.getElementById('data-available').value;
-
+  console.log(cost);
   if (
     date !== '' &&
     pincode != '' &&
@@ -22,7 +22,7 @@ function availablity() {
     // console.log(cost);
     // console.log(available);
     let i;
-    for (i = 1; i <= date; i++) {
+    for (i = 0; i <= date; i++) {
       var l, array_result;
       let someDate = new Date();
       let duration = i; //In Days
@@ -43,37 +43,38 @@ function availablity() {
             element['sessions'].forEach(ex => {
               if (
                 ex['min_age_limit'] >= age &&
-                Number(ex['available_capacity']) > 0
+                Number(ex['available_capacity']) > 0 &&
+                cost == element['fee_type']
               ) {
-                console.log(typeof ex['min_age_limit']);
-                console.log(typeof age, 'age');
+                // console.log(typeof ex['min_age_limit']);
+                // console.log(typeof age, 'age');
                 const row = document.createElement('TR');
                 const table = document.getElementById('table');
-                const th = row.insertCell(-1);
+                // const th = row.insertCell(-1);
                 table.appendChild(row);
                 // console.log(ex['min_age_limit']);
                 remove_child();
                 // const row = document.createElement('TR');
                 const th1 = row.insertCell(0);
-                th1.setAttribute('data-ns-test', 'item-date');
+                th1.setAttribute('data-ns-test', 'th1');
                 const th2 = row.insertCell(1);
-                th2.setAttribute('data-ns-test', 'item-available-capacity');
+                th2.setAttribute('data-ns-test', 'th2');
                 const th3 = row.insertCell(2);
-                th3.setAttribute('data-ns-test', 'item-vaccine');
+                th3.setAttribute('data-ns-test', 'th3');
                 const th4 = row.insertCell(3);
-                th4.setAttribute('data-ns-test', 'item-minage');
+                th4.setAttribute('data-ns-test', 'th4');
                 const th5 = row.insertCell(4);
-                th5.setAttribute('data-ns-test', 'item-pincode');
+                th5.setAttribute('data-ns-test', 'th5');
                 const th6 = row.insertCell(5);
-                th6.setAttribute('data-ns-test', 'item-hospital-name');
+                th6.setAttribute('data-ns-test', '6');
                 const th7 = row.insertCell(6);
-                th7.setAttribute('data-ns-test', 'item-state');
+                th7.setAttribute('data-ns-test', '7');
                 const th8 = row.insertCell(7);
-                th8.setAttribute('data-ns-test', 'item-district');
+                th8.setAttribute('data-ns-test', '8');
                 const th9 = row.insertCell(8);
-                th9.setAttribute('data-ns-test', 'item-block-name');
+                th9.setAttribute('data-ns-test', '9');
                 const th10 = row.insertCell(9);
-                th10.setAttribute('data-ns-test', 'item-fees');
+                th10.setAttribute('data-ns-test', '10');
                 th1.innerText = Original_date;
                 th2.innerText = ex['available_capacity'];
                 th3.innerText = ex['vaccine'];
