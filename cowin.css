@@ -98,7 +98,7 @@ td:hover {
 #second-header{
   border-radius: 25px;
   overflow: hidden;
-    box-sizing: border-box;
+  box-sizing: border-box;
   display: inline-block;
   border: 1px solid #ccc;
   padding: 12px 20px;
@@ -111,5 +111,10 @@ td:hover {
 #outsideTable{
   border-radius: 25px;
   overflow: hidden;
-      margin: 6px;
+      /* margin: 6px; */
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  margin: 8px 0;
 }
