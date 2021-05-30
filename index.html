@@ -32,7 +32,7 @@
     </div>
     <div id="second-header">
       <div class="Select-box">
-        <label class="label">Select Date Range</label>
+        <b class="label">Select Date Range</b>
         <input
           type="number"
           value="Age"
@@ -46,7 +46,7 @@
         />
       </div>
       <div class="Select-box">
-        <label class="label">Select pincode</label>
+        <b class="label">Select pincode</b>
         <input
           type="number"
           value="pincode"
@@ -55,7 +55,7 @@
           min="100000"
           required
         />
-        <label class="label">Select minimum Age</label>
+        <b class="label">Select minimum Age</b>
         <input
           type="number"
           value="Age"
@@ -64,21 +64,24 @@
           min="1"
           required
         />
-        <label class="label">Select Free/Paid </label>
+        <b class="label">Select Free/Paid </b>
         <select class="select-option" id="data-free" required>
           <option value="Free">Free</option>
           <option value="Paid">Paid</option>
         </select>
-        <label class="label">Select Availablility</label>
+        <b class="label">Select Availablility</b>
         <select class="select-option" id="data-available" required>
           <option value="Available">Availablility</option>
         </select>
       </div>
     </div>
-    <div>
+    <div id="outsideTable">
       <table id="table">
-        <tr>
-          <th>Date</th>
+      </table>
+    </div>
+  </body>
+</html>
+<!-- <th>Date</th>
           <th>Available Capacity</th>
           <th>Vaccine</th>
           <th>Min Age</th>
@@ -87,9 +90,4 @@
           <th>State</th>
           <th>District</th>
           <th>Block Name</th>
-          <th>Fees</th>
-        </tr>
-      </table>
-    </div>
-  </body>
-</html>
+          <th>Fees</th> -->

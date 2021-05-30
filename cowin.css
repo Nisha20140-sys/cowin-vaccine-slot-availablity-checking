@@ -17,6 +17,24 @@ h1 {
   margin: 10px;
   padding: 17px;
 }
+input{
+  cursor: pointer;
+  border-radius: 25px;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+select{
+  cursor: pointer;
+  border-radius: 25px;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
 .label {
   padding: 8px 13px;
 }
@@ -39,8 +57,9 @@ th {
   border-radius: 25px;
 }
 #table {
-  border: blue;
-  background-color: aqua;
+  border:#b24cfd;
+  background-color:rgb(211, 189, 181);
+  border-radius: 25px;
 }
 td {
   padding: 30px;
@@ -49,4 +68,44 @@ td {
 }
 td:hover {
   background-color: aqua;
+}
+#book{
+  background-color: red;
+}
+#available{
+  background-color: green;
+}
+#no-slots{
+  color:crimson;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  animation:move 3s infinite ease-in-out;
+}
+/* #no-slots:hover{    
+  transform: scale(2) rotate(0.1deg);
+} */
+@keyframes move{
+  0%{
+   transform: scale(1) rotate(0deg);
+  }
+    50%{
+     transform: scale(2) rotate(0.1deg);
+  
+    }
+  
+  }
+#second-header{
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 6px;
+}
+#detail{
+  border-radius: 20px;
+  overflow: hidden;
+}
+#outsideTable{
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 6px;
 }
