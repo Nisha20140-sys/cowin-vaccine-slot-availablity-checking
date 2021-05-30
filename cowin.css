@@ -113,7 +113,7 @@ td:hover {
   overflow: hidden;
       /* margin: 6px; */
   box-sizing: border-box;
-  display: inline-block;
+  /* display: inline-block; */
   border: 1px solid #ccc;
   padding: 12px 20px;
   margin: 8px 0;
